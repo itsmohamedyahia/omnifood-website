@@ -34,9 +34,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: sans-serif;
-  line-height: 1;
-  font-weight: 400;
-  color: #555;
+html {
+  font-size: 62.5%;
 }
