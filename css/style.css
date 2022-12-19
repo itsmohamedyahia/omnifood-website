@@ -299,3 +299,61 @@
   text-align: center;
   font-size: 1.8rem;
 }
+/***************************************************/
+/* TESTIMONIALS SECTION */
+/***************************************************/
+
+.section-testimonials {
+  padding-bottom: 9.6rem 0;
+  background-color: #fdf2e9;
+  align-items: center;
+  grid-template-columns: 5.5fr 4.5fr;
+  gap: 0;
+}
+
+/* left side of the section */
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+.testimonials-text {
+  padding: 9.6rem;
+}
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+}
+.testimonial-quote {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+
+/* right side of the section */
+.testimonial-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem; /*integrates beutifully with the gap */
+}
+
+.testimonial-photo-container {
+  overflow: hidden;
+}
+.testimonial-photos img {
+  width: 100%;
+  /* by default images are inline elements or kind of inline-block and there is like by default a small spacing around them to remove it, we could set them to be block elements */
+  display: block;
+  transition: all 0.4s;
+}
+
+.testimonial-photos img:hover {
+  transform: scale(1.1);
+}
