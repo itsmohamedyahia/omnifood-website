@@ -276,25 +276,6 @@
   color: #e67e22;
 }
 
-.list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-}
-
-.list-item {
-  font-size: 1.8rem;
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-}
-.list-icon {
-  width: 3rem;
-  height: 3rem;
-  color: #e67e22;
-}
-
 .all-recipes {
   text-align: center;
   font-size: 1.8rem;
@@ -356,4 +337,111 @@
 
 .testimonial-photos img:hover {
   transform: scale(1.1);
+}
+/***************************************************/
+/* PRICING SECTION */
+/***************************************************/
+.section-pricing {
+  padding: 9.6rem 0;
+}
+.card {
+  border: 2px solid #fdf2e9;
+  border-radius: 11px;
+  padding: 4.8rem;
+  text-align: center;
+  width: 75%;
+}
+.card--starter {
+  justify-self: end;
+  /* we reassigned padding here because we put a border for card starter but not the compelete so there is an extra 2 pixels taking more height so to compensate we will remove them from the padding */
+  padding: 4.6rem;
+}
+
+.card--complete {
+  background-color: #fdf2e9 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.card--complete::after {
+  content: "best value";
+  text-transform: uppercase;
+  background-color: #ffd43b;
+  font-weight: 500;
+  padding: 0.8rem 8rem;
+  position: absolute;
+  top: 6%;
+  right: -18%;
+  transform: rotate(45deg);
+  color: #333;
+  font-size: 1.4rem;
+}
+
+.card-title {
+  margin-bottom: 4.8rem;
+}
+.card-name {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #cf711f;
+  margin-bottom: 3.2rem;
+  letter-spacing: 0.75;
+}
+
+.card-currency {
+  font-size: 3rem;
+  margin-right: 0.8rem;
+  /* to center price inside card */
+  position: absolute;
+  left: -2.5rem;
+  top: 2.5rem;
+}
+
+.card-price {
+  font-size: 6.2rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+  position: relative;
+  display: inline-block;
+}
+
+.card-price-description {
+  font-size: 1.6rem;
+  /* when it breaks into two lines if screen got smaller ex on mobiles */
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+.card .list {
+  margin-bottom: 5.4rem;
+}
+
+.features-intro {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 9.6rem;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+.feature-description {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.feature-icon {
+  /* icons that are injected do not follow box sizing border box setting so if we define padding it will not be a part of the width that is assigned */
+  color: #e67e22;
+  height: 3.2rem;
+  width: 3.2rem;
+  background-color: #fae5d3;
+  padding: 1.6rem;
+  border-radius: 50%;
+  margin-bottom: 3.2rem;
 }
