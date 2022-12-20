@@ -1,10 +1,7 @@
 /*
 --- 01 TYPOGRAPHY SYSTEM
-
             FONT SIZE SYSTEM (px)
                     10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
-
             FONT WEIGHT
                 Default: 400
                 500
@@ -17,43 +14,33 @@
                    1.2
             LTR SPACING
                    -0.5px
-                    0.75px
-           
-
---- 02 COLORS
-
-            PRIMARY COLOR:#e67e22
-                TINTS: 
-                #eb984e 
-                #fae5d3
-                #fdf2e9 
-                
-                SHADES: 
-                #45260a
-                #cf711f
-            ACCENTS:  
-            GREYS:
-            #6f6f6f (lightest grey allowed on #fdf2e9)
-            #555
-            #333
-
+                    0.75px       
+--- 02 COLORS: SEE -> :ROOT
 --- 05 SHADOWS
 --- 06 BORDER-RADIUS
             Default: 9px
             11px
 --- 07 WHITESPACE
-
              SPACING SYSTEM (px)
                     2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
 :root {
+  --grey-clr-lt: #ddd;
   --grey-clr-def: #555;
   --grey-clr-drk: #333;
-  --grey-clr-onwt: #767676;
-  --grey-clr-onback: #6f6f6f;
+  --grey-clr-onwt: #767676; /* lightest grey allowed on white */
+  --grey-clr-bold-onwt: #888;
+  --grey-clr-onbg: #6f6f6f; /* lightest grey allowed on prim-clr-bg */
+  --prim-clr-lt: #eb984e;
   --prim-clr-def: #e76e22;
-  --prim-clr-back: #fdf2e9;
-  --prim-clr-back-drk: #fae5d3;
+  --prim-clr-drk: #cf711f;
+  --prim-clr-bg: #fdf2e9;
+  --prim-clr-bg-drk: #fae5d3;
+  --prim-clr-blk: #45260a;
+  --prim-clr-trns50: rgba(230, 125, 34, 0.5);
+  --prim-clr-trns35: rgba(230, 125, 34, 0.35);
+  --prim-clr-lt-trns35: rgb(235, 152, 78, 0.35);
+  --prim-clr-bg-trns50: rgba(253, 242, 233, 0.5);
 }
 
 * {
@@ -70,7 +57,7 @@ body {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   line-height: 1;
-  color: #555;
+  color: var(--grey-clr-def);
 }
 
 /***************************************************/
@@ -131,46 +118,46 @@ body {
 
 .btn--prim:link,
 .btn--prim:visited {
-  background-color: #e67e22;
+  background-color: var(--prim-clr-def);
   color: #fff;
 }
 
 .btn--prim:hover,
 .btn--prim:active {
-  background-color: #cf711f;
+  background-color: var(--prim-clr-drk);
 }
 
 .btn--sec:link,
 .btn--sec:visited {
   background-color: #fff;
-  color: #555;
+  color: var(--grey-clr-def);
 }
 
 .btn--sec:hover,
 .btn--sec:active {
-  background-color: #fdf2e9;
+  background-color: var(--prim-clr-bg);
   /*border property is added to the outside of the element thus pushing surronding elements to solve this border should be added to the inside of the element but since there is no way to do this with border, we can replicate it with box shadow so make a shadow and scale it by 3px of the original element and then set shadow to inset so they kind of get mirrored to the inside   */
   box-shadow: inset 0 0 0 3px #fff;
 }
 
 .btn--form {
-  background-color: #45260a;
-  color: #fdf2e9;
+  background-color: var(--prim-clr-blk);
+  color: var(--prim-clr-bg);
   align-self: end;
   padding: 1.2rem;
 }
 
 .btn--form:hover {
-  background-color: #fdf2e9;
-  color: #45260a;
+  background-color: var(--prim-clr-bg);
+  color: var(--prim-clr-blk);
 }
 
 *:focus {
   outline: none;
   /* outline now conforms to the border radius of the element so it could be used beautifully but box shadow is still better  
-  outline: 4px dotted #e67e22;
+  outline: 4px dotted var(--prim-clr-def);
   outline-offset: 8px; */
-  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+  box-shadow: 0 0 0 0.8rem var(--prim-clr-trns50);
 }
 /* ================ helper styles ================*/
 .margin-right-sm {
@@ -194,7 +181,7 @@ body {
 .heading-tertiary {
   font-weight: 700;
   letter-spacing: -0.05rem;
-  color: #333;
+  color: var(--grey-clr-drk);
 }
 .heading-primary {
   font-size: 5.2rem;
@@ -219,7 +206,7 @@ body {
   font-size: 1.6rem;
   font-weight: 500;
   text-transform: uppercase;
-  color: #cf711f;
+  color: var(--prim-clr-drk);
   margin-bottom: 1.6rem;
   letter-spacing: 0.75px;
 }
@@ -231,7 +218,7 @@ strong {
 .link:link,
 .link:visited {
   display: inline-block;
-  color: #e67e22;
+  color: var(--prim-clr-def);
   text-decoration: none;
   border: 1px solid currentColor;
   padding-bottom: 2px;
@@ -242,9 +229,9 @@ strong {
 
 .link:hover,
 .link:active {
-  color: #cf711f;
+  color: var(--prim-clr-drk);
   border: 1px solid transparent;
-  box-shadow: 0 0 0.5rem 0 #e67e22;
+  box-shadow: 0 0 0.5rem 0 var(--prim-clr-def);
   transform: translateY(-0.5rem);
 }
 
@@ -264,5 +251,5 @@ strong {
 .list-icon {
   width: 3rem;
   height: 3rem;
-  color: #e67e22;
+  color: var(--prim-clr-def);
 }
