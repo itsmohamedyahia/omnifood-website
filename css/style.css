@@ -595,6 +595,7 @@
   /* margin-bottom: 3.2rem; */
 }
 .footer-social-logo {
+  color: var(--grey-clr-def);
   height: 2.4rem;
   width: 2.4rem;
 }
