@@ -20,10 +20,13 @@
 .main-nav-list {
   list-style: none;
   display: flex;
-  gap: 3.2rem;
+  gap: 1.6rem;
   align-items: center;
 }
-
+.main-nav-link {
+  padding: 0.8rem;
+  border-radius: 100px;
+}
 .main-nav-link:link,
 .main-nav-link:visited {
   display: inline-block;
@@ -418,6 +421,9 @@
   margin-bottom: 5.4rem;
 }
 
+/***************************************************/
+/* FEATURES PART OF PRICING SECTION */
+/***************************************************/
 .features-intro {
   font-size: 1.6rem;
   text-align: center;
@@ -444,4 +450,97 @@
   padding: 1.6rem;
   border-radius: 50%;
   margin-bottom: 3.2rem;
+}
+
+/***************************************************/
+/* CTA SECTION */
+/***************************************************/
+
+.section-cta {
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+.cta-box {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #e67e22;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+
+  overflow: hidden;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgb(235, 152, 78, 0.35),
+      rgb(230, 126, 34, 0.35)
+    ),
+    url("../img/eating.jpg");
+  background-size: cover;
+  /* just in case the parent doesnt have enough height for whole image so center of the image should be prioritized and shown but top and bottom can be cut, default is that top is prioritized */
+  background-position: center;
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 4.8rem 6.4rem;
+  color: #45260a;
+}
+
+.section-cta .heading-secondary {
+  /* color: #45260a; */
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+  /* grid-template-rows: 1fr 1fr; */
+}
+
+.cta-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+}
+.cta-form input,
+.cta-form select {
+  padding: 1.2rem;
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+.cta-form select {
+  font-family: inherit;
+}
+.cta-form button {
+  font-family: inherit;
+}
+
+.cta-form *:focus {
+  outline: none;
+  /* outline now conforms to the border radius of the element so it could be used beautifully but box shadow is still better  
+  outline: 4px dotted #e67e22;
+  outline-offset: 8px; */
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
