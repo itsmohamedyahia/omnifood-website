@@ -13,6 +13,10 @@
 .logo {
   height: 2.2rem;
 }
+.logo-link {
+  padding: 0.8rem;
+  border-radius: 100px;
+}
 
 /***************************************************/
 /* NAVIGATION */
@@ -457,7 +461,8 @@
 /***************************************************/
 
 .section-cta {
-  padding: 4.8rem 0 9.6rem 0;
+  /* top horizontal bottom */
+  padding: 4.8rem 0 12.8rem;
 }
 
 .cta-box {
@@ -543,4 +548,106 @@
   outline: 4px dotted #e67e22;
   outline-offset: 8px; */
   box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+/***************************************************/
+/* FOOTER SECTION */
+/***************************************************/
+.grid-footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.footer {
+  padding: 12.8rem 0 9.6rem 0;
+  border-top: 1px solid #eee;
+  color: var(--grey-clr-ftr);
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+/* for tabbing style */
+
+.footer *:focus {
+  box-shadow: 0 0 0 0.4rem rgba(230, 125, 34, 0.5);
+}
+.footer-link,
+.footer-logo {
+  border-radius: 100px;
+}
+.footer-link,
+.heading-footer,
+.address {
+  padding: 0.3rem 0.6rem;
+}
+.footer-logo {
+  padding: 1rem 0.4rem 0.2rem 0.6rem;
+}
+.logo-col {
+  align-items: start;
+}
+
+/* ------------col 1------------ */
+.footer-logo {
+  display: block;
+  transform: translateY(-0.4rem);
+  /* margin-bottom: 3.2rem; */
+}
+.footer-social-logo {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+div.grid-footer > div,
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+.social-logos {
+  list-style: none;
+  display: flex;
+  gap: 1.6rem;
+  /* bad practice to just try to align with other columns */
+  /* margin-bottom: 5.4rem; */
+}
+.copyright,
+.contacts {
+  font-size: 1.4rem;
+  margin-top: auto;
+}
+/* ------------col 2------------ */
+
+.heading-footer,
+.address {
+  color: var(--grey-clr-def);
+}
+.heading-footer {
+  font-size: 1.8rem;
+  font-weight: 500;
+  /* margin-bottom: 3.6rem; */
+}
+
+/* .address {
+  margin-bottom: 2.4rem;
+} */
+.contacts {
+  font-style: normal;
+}
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: all 0.3s;
+  color: var(--grey-clr-def);
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: var(--grey-clr-drk);
+}
+
+/* ------------col 3------------ */
+.footer-nav {
+  list-style: none;
+  display: grid;
+  gap: 1.6rem;
 }

@@ -46,6 +46,15 @@
              SPACING SYSTEM (px)
                     2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
+:root {
+  --grey-clr-def: #555;
+  --grey-clr-drk: #333;
+  --grey-clr-onwt: #767676;
+  --grey-clr-onback: #6f6f6f;
+  --prim-clr-def: #e76e22;
+  --prim-clr-back: #fdf2e9;
+  --prim-clr-back-drk: #fae5d3;
+}
 
 * {
   margin: 0;
@@ -93,6 +102,7 @@ body {
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
 }
+
 .section-how .container div:nth-child(1) {
   background-attachment: fixed;
 }
