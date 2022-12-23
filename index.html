@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
   </head>
   <body>
     <header class="header">
@@ -30,6 +31,10 @@
           </li>
         </ul>
       </nav>
+      <button class="btn-mobile-nav">
+        <ion-icon name="menu-outline" class="icon-mobile-nav"></ion-icon>
+        <ion-icon name="close-outline" class="icon-mobile-nav"></ion-icon>
+      </button>
     </header>
     <main>
       <section class="section-hero">
@@ -43,9 +48,7 @@
               eat healthy again. Tailored to your personal tastes and
               nutritional needs.
             </p>
-            <a href="#" class="btn btn--prim margin-right-sm"
-              >Start eating healthy</a
-            >
+            <a href="#" class="btn btn--prim">Start eating healthy</a>
             <a href="#" class="btn btn--sec">Learn More &darr;</a>
             <div class="delivered-meals">
               <div class="delivered-customers">
@@ -297,11 +300,13 @@
                 class="testimonial-img margin-bottom-sm"
               />
               <!-- you remember when there is a caption below images that describe it in websites and mostly research papers yeah we could do that with <figcaption> element -->
-              <blockquote class="testimonial-quote">
-                Inexpensive, healthy and great-tasting meals, without even
-                having to order manually! It feels truely magical.
-              </blockquote>
-              <p class="testimonial-name">&mdash; Dave Bryson</p>
+              <div>
+                <blockquote class="testimonial-quote">
+                  Inexpensive, healthy and great-tasting meals, without even
+                  having to order manually! It feels truely magical.
+                </blockquote>
+                <p class="testimonial-name">&mdash; Dave Bryson</p>
+              </div>
             </figure>
 
             <figure class="testimonial">
@@ -310,11 +315,13 @@
                 alt="Photo of customer Ben Hadley"
                 class="testimonial-img margin-bottom-sm"
               />
-              <blockquote class="testimonial-quote">
-                The AI algorithm is crazy good, it chooses the right meals for
-                me every time. It's amazing not to worry about food anymore!
-              </blockquote>
-              <p class="testimonial-name">&mdash; Ben Hadley</p>
+              <div>
+                <blockquote class="testimonial-quote">
+                  The AI algorithm is crazy good, it chooses the right meals for
+                  me every time. It's amazing not to worry about food anymore!
+                </blockquote>
+                <p class="testimonial-name">&mdash; Ben Hadley</p>
+              </div>
             </figure>
             <figure class="testimonial">
               <img
@@ -322,11 +329,14 @@
                 alt="Photo of customer Steve Miller"
                 class="testimonial-img margin-bottom-sm"
               />
-              <blockquote class="testimonial-quote">
-                Omnifood is a life saver! I just started a company, so there's
-                no time for cooking. I couldn't live without my daily meals now!
-              </blockquote>
-              <p class="testimonial-name">&mdash; Steve Miller</p>
+              <div>
+                <blockquote class="testimonial-quote">
+                  Omnifood is a life saver! I just started a company, so there's
+                  no time for cooking. I couldn't live without my daily meals
+                  now!
+                </blockquote>
+                <p class="testimonial-name">&mdash; Steve Miller</p>
+              </div>
             </figure>
 
             <figure class="testimonial">
@@ -335,14 +345,15 @@
                 alt="Photo of customer Hannah Smith"
                 class="testimonial-img margin-bottom-sm"
               />
-              <blockquote class="testimonial-quote">
-                I got Omnifood for the whole family, and it frees up so much
-                time! Plus, everything is organic and vegan and without plastic.
-              </blockquote>
-              <p class="testimonial-name">&mdash; Hannah Smith</p>
+              <div>
+                <blockquote class="testimonial-quote">
+                  I got Omnifood for the whole family, and it frees up so much
+                  time! Plus, everything is organic and vegan and without
+                  plastic.
+                </blockquote>
+                <p class="testimonial-name">&mdash; Hannah Smith</p>
+              </div>
             </figure>
-
-            () () ()
           </div>
         </div>
         <div class="testimonial-photos">

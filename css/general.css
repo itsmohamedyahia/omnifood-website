@@ -10,8 +10,9 @@
             LINE HEIGHT
                    Default:1
                    Heading or small :1.05
+                   Med: 1.2
                    Paragraph default :1.6
-                   1.2
+                   Large: 1.8
             LTR SPACING
                    -0.5px
                     0.75px       
@@ -51,6 +52,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -58,6 +60,7 @@ body {
   font-weight: 400;
   line-height: 1;
   color: var(--grey-clr-def);
+  overflow-x: hidden;
 }
 
 /***************************************************/
@@ -237,8 +240,9 @@ strong {
 
 .list {
   list-style: none;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  /* display: flex;
+  flex-direction: column; */
   gap: 1.6rem;
 }
 
@@ -247,6 +251,7 @@ strong {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 .list-icon {
   width: 3rem;
