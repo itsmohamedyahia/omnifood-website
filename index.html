@@ -22,12 +22,14 @@
       </a>
       <nav class="header-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">How it works</a></li>
-          <li><a class="main-nav-link" href="#">Meals</a></li>
-          <li><a class="main-nav-link" href="#">Testimonials</a></li>
-          <li><a class="main-nav-link" href="#">Pricing</a></li>
+          <li><a class="main-nav-link" href="#how">How it works</a></li>
+          <li><a class="main-nav-link" href="#meals">Meals</a></li>
           <li>
-            <a class="main-nav-link main-nav-cta" href="#">Try for free</a>
+            <a class="main-nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
+          <li>
+            <a class="main-nav-link main-nav-cta" href="#cta">Try for free</a>
           </li>
         </ul>
       </nav>
@@ -48,8 +50,8 @@
               eat healthy again. Tailored to your personal tastes and
               nutritional needs.
             </p>
-            <a href="#" class="btn btn--prim">Start eating healthy</a>
-            <a href="#" class="btn btn--sec">Learn More &darr;</a>
+            <a href="#cta" class="btn btn--prim">Start eating healthy</a>
+            <a href="#how" class="btn btn--sec">Learn More &darr;</a>
             <div class="delivered-meals">
               <div class="delivered-customers">
                 <img
@@ -103,7 +105,7 @@
           </div>
         </div>
       </section>
-      <section class="section-how">
+      <section class="section-how" id="how">
         <div class="container">
           <span class="subheading">How it works</span>
           <h2 class="heading-secondary">
@@ -168,7 +170,7 @@
           </div>
         </div>
       </section>
-      <section class="section-meals">
+      <section class="section-meals" id="meals">
         <div class="container text-center">
           <span class="subheading">Meals</span>
           <h2 class="heading-secondary">
@@ -287,7 +289,7 @@
         </div>
       </section>
       <!------------------ TESTIMONIALS SECTION ------------------>
-      <section class="section-testimonials grid">
+      <section class="section-testimonials grid" id="testimonials">
         <div class="testimonials-text">
           <span class="subheading">TESTIMONIALS</span>
           <h2 class="heading-secondary">Once you try it, you can't go back</h2>
@@ -431,7 +433,7 @@
           </figure>
         </div>
       </section>
-      <section class="section-pricing">
+      <section class="section-pricing" id="pricing">
         <div class="container">
           <span class="subheading">Pricing</span>
           <h2 class="heading-secondary">
@@ -558,7 +560,7 @@
           </div>
         </div>
       </section>
-      <section class="section-cta">
+      <section class="section-cta" id="cta">
         <div class="container">
           <div class="cta-box">
             <div class="cta-text-box">
@@ -580,7 +582,12 @@
                 </div>
                 <div>
                   <label for="email">Email address</label>
-                  <input required id="email" type="email" />
+                  <input
+                    required
+                    id="email"
+                    type="email"
+                    placeholder="johnsmithsucks@yahoo.com"
+                  />
                   <!-- <input type="button" /> -->
                 </div>
                 <div>
@@ -614,7 +621,7 @@
           </a>
           <ul class="social-logos">
             <li class="footer-link">
-              <a href="#">
+              <a target="_blank" href="https://www.instagram.com/">
                 <ion-icon
                   class="footer-social-logo"
                   name="logo-instagram"
@@ -622,7 +629,7 @@
               </a>
             </li>
             <li class="footer-link">
-              <a href="#">
+              <a target="_blank" href="https://www.facebook.com/">
                 <ion-icon
                   class="footer-social-logo"
                   name="logo-facebook"
@@ -630,7 +637,7 @@
               ></a>
             </li>
             <li class="footer-link">
-              <a href="#">
+              <a target="_blank" href="https://www.twitter.com/">
                 <ion-icon
                   class="footer-social-logo"
                   name="logo-twitter"
