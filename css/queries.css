@@ -122,6 +122,7 @@
   /* mobile nav */
   .btn-mobile-nav {
     display: block;
+    /* z-index: 9999; */
   }
   .header-nav {
     background-color: rgba(255, 255, 255, 0.97);
