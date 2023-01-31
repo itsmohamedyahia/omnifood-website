@@ -25,7 +25,7 @@ let observer = new IntersectionObserver(
   {
     root: null,
     threshold: 0,
-    rootMargin: "-96px",
+    rootMargin: "-80px",
   }
 );
 
